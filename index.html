@@ -3,10 +3,59 @@
   <head>
     <title>API Test</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="http://getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+
   </head>
   <body>
 
-    <div id="map-canvas"></div>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Pit Stop</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Discover the Unknown.</h1>
+            <p class="lead">Pit Stop is an app that will help you be more spontaneous while on road trips. Just enter your route down below and find places you can start exploring. It's not about the destination, it's about the journey.</p>
+            <p>
+              <form id="route">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="origin" placeholder="Enter origin">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="destination" placeholder="Enter destination">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+            </p>
+            <!-- <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p> -->
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
     <div>
 <strong>Start: </strong>
 <select id="start" onchange="calcRoute();">
@@ -40,8 +89,13 @@
 </select>
 </div>
 
+<div id="map-canvas"></div>
+
     <!-- JAVASCRIPT SCRIPTS -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkEeDu-zBt58ez2gjMZIID3FeS8_RusC4"></script>
+    <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
     <script type="text/javascript" src="main.js"></script>
   </body>
